@@ -1,0 +1,7 @@
+ACTION=="add", \
+    SUBSYSTEMS=="tty" \
+    RUN+="/usr/local/bin/modem-detection/modem-detection"
+
+ACTION=="remove", \
+    SUBSYSTEMS=="tty" \
+    RUN+="/usr/local/bin/modem-detection/modem-detection"
