@@ -41,8 +41,8 @@ lrwxrwxrwx 1 root root 13 Jan 29 13:55 pci-0000:02:01.0-usb-0:2:1.2-port0 -> ../
 That's good. But you will hit the second issue.
 
 #### 2. You don't know for sure which modem is first after reboot!
-Because I have 2 different modems for SMS and one is from one operator and the other one is from another operator, I found out after a reboot that the modem paths where reversed!
-So instead havem modem-01 with operator-01 and modem-02 with operator-02, I ended in this situation: modem-01 with operator-02 and modem-02 with operator-01.
+Because I have 2 different modems for SMS and one is from one operator and the other one is from another operator, I found out, after a reboot, that the modem paths where reversed!
+So instead have modem-01 with operator-01 and modem-02 with operator-02, I ended in this situation: modem-01 with operator-02 and modem-02 with operator-01.
 In this case my kannel configuration was based on /dev/serial/by-path/ for each modems, but the config can not figured out which modem has which operator! Is just a configuration for operator-01 for fist modem.
 This can be an ackward situation because each time you need to check which modem is first and which modem is second. In my case I have only 2 modems, but expand this issue to 10 modems!
 
